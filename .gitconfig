@@ -1,0 +1,9 @@
+[user]
+	email = barteknowak90@gmail.com
+	name = Bartłomiej Nowak
+[core]
+	editor = vim -c startinsert
+[remote "origin"]
+	prune = true
+	tagOpt = --tags
+
