@@ -1,0 +1,17 @@
+#!/bin/bash
+
+while read key; do
+  wget -q -O - "$key" | sudo apt-key add -
+done <apt-key-list
+
+while read -e repo; do
+  sudo add-apt-repository -n -y -r "$repo" && sudo add-apt-repository -n -y "$repo"
+done <apt-repository-list
+
+sudo apt update
+
+APT_LIST=`cat apt-list`
+sudo apt install -y $APT_LIST
+
+SNAP_LIST=`cat snap-list`
+sudo snap install $SNAP_LIST
