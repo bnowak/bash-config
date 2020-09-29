@@ -29,3 +29,7 @@ alias gssqh='grep -oP "(?<=commit )[a-f\d]{40}" .git/SQUASH_MSG'
 # Git Remote Prune Origin: usuwa (lokalne) zdalne branche ktore już nie istnieją
 alias grpo='git remote prune origin'
 
+### DOCKER ###
+alias d='docker'
+alias dc='docker-compose'
+
