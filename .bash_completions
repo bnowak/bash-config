@@ -1,0 +1,3 @@
+. /usr/share/bash-completion/completions/docker-compose
+complete -F _docker_compose dc
+
