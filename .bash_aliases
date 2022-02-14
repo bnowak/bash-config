@@ -4,6 +4,8 @@ alias gd='git diff'
 alias gc='git commit'
 # Git Show Branch: wyświetla nazwę aktualnego branch'a
 alias gsb='git branch | grep -oP "(?<=^\* )[^\(].*$" || gslh'
+# Git Branch: wyświetla nazwę aktualnych branchy
+alias gb='git log --oneline --simplify-by-decoration -n 1'
 # Git Commit: skrót do commit'owania, z odpowiednim szablonem komentarza
 #alias gc='git commit -m "[$GIT_USERNAME] #$(gsb): w trakcie pracy" -e'
 # Git Status
@@ -28,6 +30,8 @@ alias gsc='git status -s | grep -oP "(?<=[AUD]{2} ).*"'
 alias gssqh='grep -oP "(?<=commit )[a-f\d]{40}" .git/SQUASH_MSG'
 # Git Remote Prune Origin: usuwa (lokalne) zdalne branche ktore już nie istnieją
 alias grpo='git remote prune origin'
+# Git SubModule Branches: wyświetla branche submodułów
+alias gsmb='git submodule foreach git log --oneline --simplify-by-decoration -n 1'
 
 ### DOCKER ###
 alias d='docker'
